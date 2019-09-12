@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    background-color: #0f0505;
+    color: #fff;
+}
+
+.box {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../images/img1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    margin: 40px auto;
+    border-radius: 5px;
+    position: relative;
+    transition: all .4s;
+    z-index: 9;
+}
+.box::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .4s;
+    opacity: 0;
+    z-index: -9;
+}
+.box:hover::before {
+    opacity: 1;
+}
+.overlay {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    overflow: hidden;
+}
+.overlay-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 999;
+    padding: 100px 0;
+    text-align: center;
+    opacity: 0;
+    transition: all .4s;
+}
+.overlay-inner:hover {
+    opacity: 1;
+}
+.overlay-icon {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    display: inline-block;
+    line-height: 2.2;
+    margin-bottom: 30px;
+    transition: all .4s;
+}
+.txt-box {
+    transition: all .4s;
+    position: absolute;
+    bottom: 40px;
+}
+.box:hover .txt-box {
+    bottom: 70px;
+}
+.box:hover .overlay-icon {
+    width: 40px;
+    height: 40px;
+}
+.overlay-inner::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    border-left: 5px solid yellow;
+    border-bottom: 5px solid yellow;
+    bottom: 0;
+    left: 0;
+    transition: all .6s;
+    opacity: 0;
+}
+.overlay-inner:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.overlay-inner::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    border-right: 5px solid yellow;
+    border-top: 5px solid yellow;
+    right: 0;
+    top: 0;
+    transition: all .6s;
+    opacity: 0;
+}
+.overlay-inner:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.overlay-icon-1 {
+    position: absolute;
+    left: 0;
+    right: 20%;
+    top: 0;
+    bottom: 20%;
+    margin: auto;
+}
+.overlay-icon-2 {
+    position: absolute;
+    left: 20%;
+    right: 0;
+    top: 0;
+    bottom: 20%;
+    margin: auto;
+}
+.overlay-icon-1 {}
+.overlay-icon-1 {}
